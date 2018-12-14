@@ -20,7 +20,7 @@ class TasksController extends AppController
 			return true;
 		}
 
-		// Apenas o proprietário do artigo pode editar e excluí
+		// Apenas o proprietário da tarefa pode editar e excluir
 		if (in_array($this->request->getParam('action'), ['edit', 'changeStatus', 'delete'])) 
 		{
 			$taskId = (int)$this->request->getParam('pass.0');
