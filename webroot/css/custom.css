@@ -1,0 +1,268 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #212121;
+    margin: 0px;
+    display: table;
+    left: 50%;
+    position: relative;
+    width: 500px;
+    margin-left: -250px;
+}
+
+textArea {
+    border: 0px;
+    font-family: Arial;
+    font-size: 33px;
+    margin: 0px;
+    width: 500px;
+    padding: 0px;
+    overflow: auto;
+    resize: none;
+    background-color: #898989;
+}
+
+input,
+button {
+    height: 60px;
+    width: 100%;
+    padding: 0px !important;
+    border: 0px;
+    background-color: #898989;
+    font-size: 33px;
+}
+
+a {
+    text-decoration: none;
+    color: #CCCBCB;
+}
+
+table {
+    width: 100%;
+    position: relative;
+}
+
+.app {
+    height: 100%;
+    margin-left: -250px;
+    width: 500px;
+    font-size: 15pt;
+    font-family: Verdana, Arial;
+    background: rgba(62,62,62, 0.27 );
+    color: #282828;
+    left: 50%;
+    position: relative;
+    box-shadow: 0px 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+    height: 65px;
+    width: 500px;
+    position: fixed;
+    background: #F7C325;
+    left: 50%;
+    margin-left: -250px;
+    bottom: 0px;
+    box-shadow: 0px -15px 5px rgba(0,0,0,0.5);
+}
+
+.months {
+    background-color: #4E4E4E;
+    color: #F7C325;
+    width: 500px;
+    height: 30px;
+    padding-top: 6px;
+}
+
+.tasks {
+    border-bottom: 1px solid #4E4E4E;
+    width: 450px;
+    border-left: 1px solid #4E4E4E;
+    padding: 10px;
+}
+
+.tasks:hover {
+    background-color: #2C9DFF;
+    cursor: pointer;
+}
+
+.status {
+    min-width: 40px;
+}
+
+.status div {
+    border-radius: 50%;
+    text-align: center;
+    height: 20px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.status-pendente div {
+    background: #bd4141;
+}
+
+.status-concluido div {
+    background: #418a41;
+}
+
+.divLogin {
+    height: 60px;
+    width: 60px;
+    background-image: url("../img/login.png");
+    background-size: 30px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F7C325;
+    padding: 0px;
+}
+
+.divPass {
+    height: 60px;
+    width: 60px;
+    background-image: url("../img/password.png");
+    background-size: 30px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F7C325;
+    padding: 0px;
+}
+
+.inputLogin {
+    background-color: #F7C325 !important;
+}
+
+.logo {
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 174px;
+    width: 174px;
+    margin-bottom: 10px;
+    left: 50%;
+    position: relative;
+    margin-left: -87px;
+}
+
+.title {
+    color: #F7C325;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.alert {
+    font-size: 15px;
+    color: rgba(255, 0, 0, 0.8);
+    padding-top: 40px;
+}
+
+.notFoundImage {
+    background-image: url("../img/busy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 140px;
+    width: 140px;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    margin-left: -70px;
+}
+
+.notFoundLabel {
+    color: #F7C325;
+    height: 20px;
+    width: 300px;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    margin-left: -150px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.home {
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    position: relative;
+    margin-left: -17.5px;
+    background-image: url("../img/home.png");
+}
+
+.home:hover {
+    background-image: url("../img/home_hover.png");
+    cursor: pointer;
+}
+
+.add {
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    position: relative;
+    margin-left: -17.5px;
+    background-image: url("../img/add.png");
+}
+
+.add:hover {
+    background-image: url("../img/add_hover.png");
+    cursor: pointer;
+}
+
+.menuTable {
+    height: 65px;
+    width: 225px !important;
+    margin-left: -112.5px;
+    left: 50%;
+    top: 50%;
+    margin-top: -32.5px;
+    border-spacing: 0px;
+}
+
+.btSave {
+    background: #F7C325 !important;
+    width: 265px !important;
+}
+
+.btDelete {
+    background: #C32A2A !important;
+    padding: 8px 8px 12px 7px !important;
+    background-color: #898989;
+    font-size: 33px;
+    color: black;
+}
+
+.btDelete:hover {
+    color: black;
+}
+
+.btBack {
+    background-image: url("../img/back.png");
+    width: 60px !important;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    color: #282828;
+	cursor: pointer;
+}
+
+.divActions {
+    height: 65px;
+    position: fixed;
+    left: 50%;
+    margin-left: -250px;
+    bottom: 0px;
+    width: 500px;
+}
+
+.newAccount {
+    color: #2C9DFF;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
