@@ -62,7 +62,16 @@
 	</tr>
 </table>
 <div class="divActions">
-	<input type="" onclick="location.href = '/tasks'" class="btBack">
+		<?php
+		echo $this->Html->link('<input class="btBack"/>',
+		array(
+			  'controller' => 'tasks',
+			  'action'   => 'index'
+			  ),
+		array(
+			  'escape'   => false
+			 ));
+		 ?>
 	<?= $this->Form->button(__('SALVAR'), array( 'class' => 'btSave', 'name' => 'edit' )); ?>
 	<?= $this->Form->end() ?>	
 	<?= $this->Form->postLink(

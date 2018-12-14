@@ -44,7 +44,7 @@
 		<tr>
 			<td colspan="2">
 				<div class="newAccount">
-					Crie uma nova conta <a href="/Users/Add"><u style="color:#2C9DFF !important">aqui</u></a>
+					Crie uma nova conta <?= $this->Html->link('aqui', ['action' => 'add']) ?>					
 				</div>
 			</td>
 		</tr>

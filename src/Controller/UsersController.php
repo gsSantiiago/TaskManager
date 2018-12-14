@@ -11,9 +11,8 @@ class UsersController extends AppController
     public function beforeFilter(Event $event)
     {
 		parent::beforeFilter($event);
-		// Permitir aos usuários se registrarem e efetuar logout.
-		// Você não deve adicionar a ação de "login" a lista de permissões.
-		// Isto pode causar problemas com o funcionamento normal do AuthComponent.
+		
+		//Permitir aos usuários se registrarem e efetuar logout
 		$this->Auth->allow(['add', 'logout']);
     }
 	
@@ -21,16 +20,21 @@ class UsersController extends AppController
 	{
 		if ($this->request->is('post')) 
 		{
+			//Obter o usuário autenticado
 			$user = $this->Auth->identify();
 			
+			//Verificar se existe usuário autenticado
 			if ($user) 
 			{
+				//Definir o usuário autenticado				
 				$this->Auth->setUser($user);
 				
 				return $this->redirect($this->Auth->redirectUrl());
 			}
 			
-			$this->Flash->error(__('Usuário ou senha inválido, tente novamente'));
+			//Exibir mensagem de aviso que usuário e/ou senha são inválidos 
+			//Caso não encontre nenhum usuário autenticado
+			$this->Flash->error(__('Usuário e/ou senha inválido, tente novamente'));
 		}
 	}
 
@@ -41,6 +45,7 @@ class UsersController extends AppController
 
 	public function index()
 	{
+		//Definir a lista de usuários do sistema		
         $this->set('users', $this->Users->find('all'));		
     }
 
@@ -54,12 +59,15 @@ class UsersController extends AppController
 			
             if ($this->Users->save($user)) 
 			{
-                $this->Flash->success(__('O usuário foi salvo.'));
+				//Exibir mensagem de aviso de criação do novo usuário				
+                $this->Flash->success(__('O usuário foi salvo'));
 				
+				//Redirecionar para a página de login
                 return $this->redirect(['action' => 'login']);
             }
 			
-            $this->Flash->error(__('Não é possível adicionar o usuário.'));
+			//Exibir mensagem de aviso caso não seja possível criar um novo usuário		
+            $this->Flash->error(__('Não é possível adicionar o usuário'));
         }
 		
         $this->set('user', $user);

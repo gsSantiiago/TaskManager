@@ -70,16 +70,32 @@
 		<tr>
 			<td>
 				<div class="home">
-					<a href="/Users/logout">
-						<div class="home"></div>
-					</a>
+				<?php
+				echo $this->Html->link(
+					'<div class="home"></div>',
+					array(
+						'controller' => 'users',
+						'action'   => 'logout'
+					),
+					array(
+						'escape'   => false
+					));
+				 ?>				
 				</div>
 			</td>
 			<td>
 				<div class="add">
-					<a href="/Tasks/Add">
-						<div class="add"></div>
-					</a>
+				<?php
+				echo $this->Html->link(
+					'<div class="add"></div>',
+					array(
+						'controller' => 'tasks',
+						'action'   => 'add'
+					),
+					array(
+						'escape'   => false
+					));
+				 ?>	
 				</div>
 			</td>
 		</tr>

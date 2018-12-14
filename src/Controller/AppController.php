@@ -27,7 +27,7 @@ class AppController extends Controller
 	
 	public function isAuthorized($user)
 	{
-		// Bloqueia acesso por padr?o
+		// Bloqueia acesso por padrão
 		return false;
 	}
 	
