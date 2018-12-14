@@ -108,11 +108,11 @@ class TasksController extends AppController
 			
 			if ($this->Tasks->save($task))
 			{
-				$this->Flash->success(__('Seu usuário foi atualizado.'));
+				$this->Flash->success(__('Sua tarefa foi atualizada'));
 				
 				return $this->redirect(['action' => 'index']);
 			}
-			$this->Flash->error(__('Seu usuário não pôde ser atualizado.'));
+			$this->Flash->error(__('Sua tarefa não pôde ser atualizada'));
 		}
 
 		$this->set('task', $task);
@@ -149,7 +149,7 @@ class TasksController extends AppController
 		
 		if ($this->Tasks->delete($task)) 
 		{
-			$this->Flash->success(__('O usuários com id: {0} foi deletado.', h($id)));
+			$this->Flash->success(__('A tarefa com id: {0} foi deletada.', h($id)));
 			
 			return $this->redirect(['action' => 'index']);
 		}
