@@ -1,3 +1,14 @@
+# App test with manage tasks with CakePHP
+
+## Install
+
+> $ composer install
+
+## Config
+
+### Create MySql database
+
+```
 CREATE DATABASE TaskManager;
 
 CREATE TABLE users
@@ -18,3 +29,4 @@ datecreate datetime not null,
 datedone datetime,    
 done boolean not null DEFAULT false
 );
+```
