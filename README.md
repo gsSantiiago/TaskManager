@@ -1,4 +1,4 @@
-# App test with manage tasks with CakePHP
+# App test with tasks management in CakePHP
 
 ## Install
 
